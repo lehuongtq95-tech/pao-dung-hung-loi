@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 body {
     background-color: #f7f3ea;
     padding: 30px;
-    font-family: Arial, sans-serif;
+    font-family: "Be Vietnam Pro", Arial, sans-serif;
 }
 h1 {
     color: #7a1f1f;
     text-align: center;
+    margin: 0 0 8px;
+    line-height: 1.2;
 }
 h2 {
     color: #7a1f1f;
@@ -28,6 +31,9 @@ audio {
     font-size: 18px;
     color: #666666;
     margin-bottom: 40px;
+        margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 .bai-hat {
     position: relative;
@@ -107,7 +113,7 @@ margin: 0 auto;
     max-width: 700px;
     height: 280px;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 80%;
     border-radius: 16px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     margin-bottom: 8px;
@@ -799,8 +805,9 @@ transition:
 }
 .anh-tu-lieu-bai img {
     width: 100%;
-    max-height: 420px;
+    height: 280px;
     object-fit: cover;
+    object-position: center 80%;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -880,4 +887,293 @@ transition:
 }
 .lien-ket-anh-bai.khong-co-anh::after {
     content: "Chưa có ảnh tư liệu";
+}
+.thong-bao-audio {
+    padding: 10px 12px;
+    margin: 10px 0 15px;
+    background-color: #f3eee5;
+    border: 1px dashed #c9b9a4;
+    border-radius: 8px;
+    color: #777777;
+    font-size: 14px;
+    font-style: italic;
+}
+.kho-loi p {
+    margin: 0 0 18px;
+    line-height: 1.8;
+}
+
+.kho-loi p:last-child {
+    margin-bottom: 0;
+}
+.quyen-tu-lieu {
+    margin: 30px auto 20px;
+    padding: 14px 18px;
+    max-width: 1100px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    background: #f7f7f7;
+    border-left: 4px solid #8b3a2b;
+    border-radius: 6px;
+}
+
+.quyen-tu-lieu strong {
+    color: #333;
+}
+.loi-song-song {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.cot-loi {
+    min-width: 0;
+}
+
+.cot-loi h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.kho-loi p {
+    margin: 0 0 6px;
+    line-height: 1.8;
+}
+
+.kho-loi {
+    margin-bottom: 22px;
+}
+
+.kho-loi:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .loi-song-song {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+.bai-hat img,
+.bai-hat .anh-tu-lieu,
+.bai-hat .anh-bai-hat,
+.bai-hat .khung-anh,
+.bai-hat .placeholder-anh {
+    display: none !important;
+}
+/* ==================================================
+   HOA VĂN 4 GÓC
+   Phong cách: nhẹ - mềm - chìm - thủ công
+   ================================================== */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hoa-van-goc {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Một mẫu hoa văn dùng chung rồi lật cho 4 góc */
+.hoa-van-goc .goc {
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    opacity: 0.13;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%238b6557' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 198 C42 165 45 126 77 99 C104 76 139 78 162 53 C175 39 181 22 196 12'/%3E%3Cpath d='M47 152 C33 150 26 141 23 130 C37 131 47 138 47 152Z'/%3E%3Cpath d='M57 133 C65 120 76 115 87 117 C82 130 72 137 57 133Z'/%3E%3Cpath d='M77 101 C63 98 57 89 56 78 C69 81 78 89 77 101Z'/%3E%3Cpath d='M96 87 C103 74 114 69 126 72 C120 84 110 91 96 87Z'/%3E%3Cpath d='M128 73 C116 65 114 54 118 44 C130 51 134 61 128 73Z'/%3E%3Cpath d='M157 55 C166 44 176 41 186 45 C180 56 170 61 157 55Z'/%3E%3Cpath d='M27 176 C38 171 48 172 57 178'/%3E%3Cpath d='M37 169 C33 160 35 153 41 148'/%3E%3C/g%3E%3Cg fill='none' stroke='%23a58475' stroke-width='1.25'%3E%3Cpath d='M20 202 H71'/%3E%3Cpath d='M17 205 V157'/%3E%3Cpath d='M71 202 l8 -8 8 8 -8 8Z'/%3E%3Cpath d='M17 157 l8 -8 8 8 -8 8Z'/%3E%3Cpath d='M94 91 l7 -7 7 7 -7 7Z'/%3E%3Ccircle cx='101' cy='91' r='2.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* Góc trên trái */
+.hoa-van-goc .tl {
+    top: 4px;
+    left: 4px;
+    transform: rotate(90deg);
+}
+
+/* Góc trên phải */
+.hoa-van-goc .tr {
+    top: 4px;
+    right: 4px;
+    transform: rotate(180deg);
+}
+
+/* Góc dưới trái */
+.hoa-van-goc .bl {
+    bottom: 4px;
+    left: 4px;
+}
+
+/* Góc dưới phải */
+.hoa-van-goc .br {
+    bottom: 4px;
+    right: 4px;
+    transform: scaleX(-1);
+}
+
+
+/* Nội dung website luôn nằm phía trên hoa văn */
+body > *:not(.hoa-van-goc) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Điện thoại */
+@media (max-width: 768px) {
+
+    .hoa-van-goc .goc {
+        width: 125px;
+        height: 125px;
+        opacity: 0.08;
+    }
+
+}
+/* ===== TRỢ LÝ AI PÁO DUNG ===== */
+
+.tro-ly-ai {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 18px 22px;
+    background: rgba(255, 252, 247, 0.96);
+    border: 1px solid rgba(126, 55, 45, 0.18);
+    border-radius: 18px;
+    box-shadow: 0 8px 26px rgba(60, 40, 30, 0.06);
+}
+
+.ai-tieu-de {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.ai-bieu-tuong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #7f3029;
+    color: #fff;
+    font-size: 24px;
+}
+
+.ai-tieu-de h2 {
+    margin: 0 0 4px;
+    color: #702b26;
+}
+
+.ai-tieu-de p {
+    margin: 0;
+    color: #665b55;
+}
+
+.ai-goi-y {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.ai-goi-y-btn {
+    padding: 9px 14px;
+    border: 1px solid rgba(126, 55, 45, 0.25);
+    border-radius: 20px;
+    background: #fffaf5;
+    color: #71362f;
+    cursor: pointer;
+}
+
+.ai-goi-y-btn:hover {
+    background: #f3e7df;
+}
+
+.ai-khung-hoi {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+#ai-cau-hoi {
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    resize: none;
+    font-size: 16px;
+    border-radius: 12px;
+}
+#ai-cau-hoi:focus {
+    border-color: #8a443a;
+}
+#ai-gui {
+    min-width: 95px;
+    height: 50px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 12px;
+    background: #7f3029;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+#ai-gui:hover {
+    background: #69251f;
+}
+.ai-tra-loi {
+    margin-top: 18px;
+    padding: 16px 18px;
+    border-left: 4px solid #8a443a;
+    border-radius: 8px;
+    background: #f8f1ec;
+    line-height: 1.7;
+}
+.ai-luu-y {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .tro-ly-ai {
+        padding: 20px;
+    }
+
+    .ai-khung-hoi {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+    #ai-gui {
+        width: 100%;
+    }
+}
+.gioi-thieu-ngan {
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
 }

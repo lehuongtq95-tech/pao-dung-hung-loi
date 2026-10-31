@@ -30,10 +30,23 @@ if (audioChiTiet && hienThiThoiLuong) {
     });
     const nguonAudio = audioChiTiet.querySelector("source");
     if (nguonAudio) {
-        nguonAudio.addEventListener("error", function () {
-            hienThiThoiLuong.textContent = "chưa có bản ghi";
-        });
-    }
+    nguonAudio.addEventListener("error", function () {
+        hienThiThoiLuong.textContent = "chưa có bản ghi";
+        audioChiTiet.style.display = "none";
+
+        if (!document.querySelector(".thong-bao-audio")) {
+            const thongBaoAudio = document.createElement("p");
+
+            thongBaoAudio.className = "thong-bao-audio";
+            thongBaoAudio.textContent = "Bản ghi âm: đang bổ sung";
+
+            audioChiTiet.insertAdjacentElement(
+                "afterend",
+                thongBaoAudio
+            );
+        }
+    });
+}
 }
 const anhTuLieu = document.querySelector(".anh-tu-lieu-bai img");
 function xuLyAnhBiThieu() {

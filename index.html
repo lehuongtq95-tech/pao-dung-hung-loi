@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +12,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="trang-chu">
+
+    <div class="hoa-van-goc" aria-hidden="true">
+        <span class="goc tl"></span>
+        <span class="goc tr"></span>
+        <span class="goc bl"></span>
+        <span class="goc br"></span>
+    </div>
     <a class="bo-qua" href="#noi-dung-chinh">Bỏ qua đến nội dung chính</a>
     <h1>Páo Dung Hùng Lợi</h1>
     <p class="mo-ta">Không gian lưu giữ và giới thiệu tiếng hát Páo Dung của người Dao.</p>
     <img class="anh-dau-trang" src="images/pao-dung.jpg" alt="Páo Dung Hùng Lợi">
-    <p class="chu-thich-anh">Ảnh tư liệu về văn hóa Páo Dung tại xã Hùng Lợi.</p>
+    <p class="chu-thich-anh">Các thành viên Câu lạc bộ Páo Dung thôn Trung Minh, xã Hùng Lợi, tỉnh Tuyên Quang</p>
     <nav aria-label="Điều hướng chính">
     <a href="#trang-chu">Trang chủ</a>
     <a href="#gioi-thieu">Giới thiệu</a>
@@ -23,7 +33,9 @@
 </nav>
 <main id="noi-dung-chinh" tabindex="-1">
     <h2 id="gioi-thieu">Giới thiệu về Páo Dung</h2>
-    <p>Páo Dung là hình thức diễn xướng dân gian đặc sắc của cộng đồng người Dao, gắn với đời sống văn hóa và sinh hoạt cộng đồng.</p>
+    <p class="gioi-thieu-ngan">
+    Páo Dung là hình thức diễn xướng dân gian đặc sắc của cộng đồng người Dao, gắn với đời sống văn hóa và sinh hoạt cộng đồng.
+</p>
     <section class="ve-kho-tu-lieu" id="ve-kho-tu-lieu">
     <h2>Về kho tư liệu</h2>
     <div class="cac-gia-tri-kho">
@@ -113,14 +125,12 @@
 >
 <button type="button" id="xoa-tim-kiem" disabled>Xóa tìm kiếm</button>
 </div>
-<p class="goi-y-tim-kiem">
-    Có thể tìm theo mã tư liệu, tên bài, người thể hiện hoặc chủ đề.
-</p>
+<p class="goi-y-tim-kiem">Có thể tìm theo mã tư liệu, số bài, người thể hiện hoặc chủ đề.</p>
 <div class="bo-loc">
     <label for="loc-trang-thai">Trạng thái tư liệu:</label>
     <select id="loc-trang-thai" aria-label="Lọc theo trạng thái tư liệu">
         <option value="tat-ca">Tất cả</option>
-        <option value="dang-kiem-chung">Đang cập nhật và kiểm chứng</option>
+        <option value="dang-kiem-chung">Đang kiểm chứng</option>
         <option value="da-kiem-chung">Đã kiểm chứng</option>
     </select>
     <label for="sap-xep">Sắp xếp:</label>
@@ -144,38 +154,72 @@
         Xem lại toàn bộ kho
     </button>
 </div>
+<section class="tro-ly-ai" id="tro-ly-ai">
+    <div class="ai-tieu-de">
+        <span class="ai-bieu-tuong">✦</span>
+        <div>
+            <h2>Trợ lý AI Páo Dung</h2>
+            <p>Hỗ trợ tra cứu và tìm hiểu kho tư liệu Páo Dung của dự án.</p>
+        </div>
+    </div>
+
+    <div class="ai-goi-y">
+        <button type="button" class="ai-goi-y-btn">
+            Bài nào nói về tình mẹ?
+        </button>
+
+        <button type="button" class="ai-goi-y-btn">
+            Tìm các bài về hôn nhân
+        </button>
+
+        <button type="button" class="ai-goi-y-btn">
+            Bài nào nói về quê hương?
+        </button>
+    </div>
+
+    <div class="ai-khung-hoi">
+        <textarea
+            id="ai-cau-hoi"
+            rows="3"
+            placeholder="Nhập câu hỏi về 30 bài Páo Dung..."
+        ></textarea>
+
+        <button type="button" id="ai-gui">
+            Hỏi AI
+        </button>
+    </div>
+
+    <div id="ai-tra-loi" class="ai-tra-loi" hidden></div>
+
+    <p class="ai-luu-y">
+        AI hỗ trợ tra cứu và diễn giải dựa trên kho tư liệu của dự án;
+        không thay thế nội dung tư liệu gốc.
+    </p>
+</section>
 <div class="danh-sach-bai" id="danh-sach-bai">
 <article
     class="bai-hat"
     id="bai-pd001"
     aria-labelledby="tieu-de-pd001"
     data-ma="PD001"
-    data-trang-thai="dang-kiem-chung"
+    data-trang-thai="da-kiem-chung"
 >
     <h3 class="tieu-de-bai" id="tieu-de-pd001">
     <a href="bai01.html">Bài Páo Dung số 01</a>
 </h3>
-<a href="bai01.html" class="lien-ket-anh-bai">
-    <img
-        class="anh-the-bai"
-        src="images/bai01.jpg"
-        alt="Ảnh tư liệu Bài Páo Dung số 01"
-        loading="lazy"
-    >
-</a>
+
     <p class="ma-tu-lieu">Mã tư liệu: PD001</p>
-    <p class="trang-thai-the dang-kiem-chung">
-    Trạng thái: Đang cập nhật và kiểm chứng
+    <p class="trang-thai-the da-kiem-chung">
+    Trạng thái: Đã kiểm chứng
 </p>
-    <p><strong>Tên bài:</strong> đang cập nhật</p>
-    <p><strong>Người thể hiện:</strong> đang cập nhật</p>
-    <p><strong>Chủ đề:</strong> đang cập nhật</p>
-    <p><strong>Loại hình:</strong> đang cập nhật</p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tình yêu – giao duyên</p>
+    
     <p class="ngay-cap-nhat">
-    <strong>Cập nhật lần cuối:</strong> đang cập nhật
+    
 </p>
     <audio controls preload="metadata" aria-label="Bản ghi âm Bài Páo Dung số 01">
-        <source src="audio/bai01.mp3" type="audio/mpeg">
+        <source src="audio/bai01.m4a" type="audio/mp4">
     </audio>
     <div class="nhom-nut">
     <a class="nut-loi" href="bai01.html#loi-bai-hat">Xem lời bài hát</a>
@@ -188,32 +232,24 @@
     id="bai-pd002"
     aria-labelledby="tieu-de-pd002"
     data-ma="PD002"
-    data-trang-thai="dang-kiem-chung"
+    data-trang-thai="da-kiem-chung"
 >
     <h3 class="tieu-de-bai" id="tieu-de-pd002">
     <a href="bai02.html">Bài Páo Dung số 02</a>
 </h3>
-<a href="bai02.html" class="lien-ket-anh-bai">
-    <img
-        class="anh-the-bai"
-        src="images/bai02.jpg"
-        alt="Ảnh tư liệu Bài Páo Dung số 02"
-        loading="lazy"
-    >
-</a>
+
     <p class="ma-tu-lieu">Mã tư liệu: PD002</p>
-    <p class="trang-thai-the dang-kiem-chung">
-    Trạng thái: Đang cập nhật và kiểm chứng
+    <p class="trang-thai-the da-kiem-chung">
+    Trạng thái: Đã kiểm chứng
 </p>
-    <p><strong>Tên bài:</strong> đang cập nhật</p>
-    <p><strong>Người thể hiện:</strong> đang cập nhật</p>
-    <p><strong>Chủ đề:</strong> đang cập nhật</p>
-    <p><strong>Loại hình:</strong> đang cập nhật</p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tình yêu – giao duyên</p>
+    
     <p class="ngay-cap-nhat">
-    <strong>Cập nhật lần cuối:</strong> đang cập nhật
+    
 </p>
     <audio controls preload="metadata" aria-label="Bản ghi âm Bài Páo Dung số 02">
-        <source src="audio/bai02.mp3" type="audio/mpeg">
+        <source src="audio/bai02.m4a" type="audio/mp4">
     </audio>
     <div class="nhom-nut">
 <a class="nut-loi" href="bai02.html#loi-bai-hat">Xem lời bài hát</a>
@@ -226,36 +262,28 @@
     id="bai-pd003"
     aria-labelledby="tieu-de-pd003"
     data-ma="PD003"
-    data-trang-thai="dang-kiem-chung"
+    data-trang-thai="da-kiem-chung"
 >
     <h3 class="tieu-de-bai" id="tieu-de-pd003">
         <a href="bai03.html">Bài Páo Dung số 03</a>
     </h3>
-    <a href="bai03.html" class="lien-ket-anh-bai">
-    <img
-        class="anh-the-bai"
-        src="images/bai03.jpg"
-        alt="Ảnh tư liệu Bài Páo Dung số 03"
-        loading="lazy"
-    >
-</a>
+    
     <p class="ma-tu-lieu">Mã tư liệu: PD003</p>
-    <p class="trang-thai-the dang-kiem-chung">
-        Trạng thái: Đang cập nhật và kiểm chứng
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
     </p>
-    <p><strong>Tên bài:</strong> đang cập nhật</p>
-    <p><strong>Người thể hiện:</strong> đang cập nhật</p>
-    <p><strong>Chủ đề:</strong> đang cập nhật</p>
-    <p><strong>Loại hình:</strong> đang cập nhật</p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tình yêu – giao duyên</p>
+    
     <p class="ngay-cap-nhat">
-    <strong>Cập nhật lần cuối:</strong> đang cập nhật
+    
 </p>
     <audio
         controls
         preload="metadata"
         aria-label="Bản ghi âm Bài Páo Dung số 03"
     >
-        <source src="audio/bai03.mp3" type="audio/mpeg">
+        <source src="audio/bai03.m4a" type="audio/mp4">
     </audio>
     <div class="nhom-nut">
         <a class="nut-loi" href="bai03.html#loi-bai-hat">Xem lời bài hát</a>
@@ -267,34 +295,26 @@
     class="bai-hat"
     id="bai-pd004"
     aria-labelledby="tieu-de-pd004"
-    data-ma="pd004"
-    data-trang-thai="dang-kiem-chung"
+    data-ma="PD004"
+    data-trang-thai="da-kiem-chung"
 >
     <h3 class="tieu-de-bai" id="tieu-de-pd004">
         <a href="bai04.html">Bài Páo Dung số 04</a>
     </h3>
-    <a href="bai04.html" class="lien-ket-anh-bai">
-        <img
-            class="anh-the-bai"
-            src="images/bai04.jpg"
-            alt="Ảnh tư liệu Bài Páo Dung số 04"
-            loading="lazy"
-        >
-    </a>
+    
     <p class="ma-tu-lieu">Mã tư liệu: PD004</p>
-    <p class="trang-thai-the dang-kiem-chung">
-        Trạng thái: Đang cập nhật và kiểm chứng
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
     </p>
-    <p><strong>Tên bài:</strong> đang cập nhật</p>
-    <p><strong>Người thể hiện:</strong> đang cập nhật</p>
-    <p><strong>Chủ đề:</strong> đang cập nhật</p>
-    <p><strong>Loại hình:</strong> đang cập nhật</p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tình yêu – giao duyên</p>
+    
     <audio
         controls
         preload="metadata"
         aria-label="Bản ghi âm Bài Páo Dung số 04"
     >
-        <source src="audio/bai04.mp3" type="audio/mpeg">
+        <source src="audio/bai04.m4a" type="audio/mp4">
     </audio>
     <div class="nhom-nut">
         <a class="nut-loi" href="bai04.html#loi-bai-hat">Xem lời bài hát</a>
@@ -302,11 +322,821 @@
         <a class="nut-chi-tiet" href="bai04.html">Xem chi tiết</a>
     </div>
 </article>
+<article
+    class="bai-hat"
+    id="bai-pd005"
+    aria-labelledby="tieu-de-pd005"
+    data-ma="PD005"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd005">
+        <a href="bai05.html">Bài Páo Dung số 05</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD005</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tình yêu – giao duyên</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 05"
+    >
+        <source src="audio/bai05.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai05.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai05.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai05.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd006"
+    aria-labelledby="tieu-de-pd006"
+    data-ma="PD006"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd006">
+        <a href="bai06.html">Bài Páo Dung số 06</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD006</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tình yêu – giao duyên</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 06"
+    >
+        <source src="audio/bai06.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai06.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai06.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai06.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd007"
+    aria-labelledby="tieu-de-pd007"
+    data-ma="PD007"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd007">
+        <a href="bai07.html">Bài Páo Dung số 07</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD007</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đời sống tình cảm gia đình, đạo hiếu</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 07"
+    >
+        <source src="audio/bai07.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai07.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai07.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai07.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd008"
+    aria-labelledby="tieu-de-pd008"
+    data-ma="PD008"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd008">
+        <a href="bai08.html">Bài Páo Dung số 08</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD008</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đời sống tình cảm gia đình, đạo hiếu</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 08"
+    >
+        <source src="audio/bai08.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai08.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai08.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai08.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd009"
+    aria-labelledby="tieu-de-pd009"
+    data-ma="PD009"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd009">
+        <a href="bai09.html">Bài Páo Dung số 09</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD009</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đời sống tình cảm gia đình, đạo hiếu</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 09"
+    >
+        <source src="audio/bai09.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai09.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai09.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai09.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd010"
+    aria-labelledby="tieu-de-pd010"
+    data-ma="PD010"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd010">
+        <a href="bai10.html">Bài Páo Dung số 10</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD010</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đời sống tình cảm gia đình, đạo hiếu</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 10"
+    >
+        <source src="audio/bai10.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai10.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai10.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai10.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd011"
+    aria-labelledby="tieu-de-pd011"
+    data-ma="PD011"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd011">
+        <a href="bai11.html">Bài Páo Dung số 11</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD011</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 11"
+    >
+        <source src="audio/bai11.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai11.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai11.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai11.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd012"
+    aria-labelledby="tieu-de-pd012"
+    data-ma="PD012"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd012">
+        <a href="bai12.html">Bài Páo Dung số 12</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD012</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 12"
+    >
+        <source src="audio/bai12.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai12.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai12.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai12.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd013"
+    aria-labelledby="tieu-de-pd013"
+    data-ma="PD013"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd013">
+        <a href="bai13.html">Bài Páo Dung số 13</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD013</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 13"
+    >
+        <source src="audio/bai13.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai13.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai13.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai13.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd014"
+    aria-labelledby="tieu-de-pd014"
+    data-ma="PD014"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd014">
+        <a href="bai14.html">Bài Páo Dung số 14</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD014</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 14"
+    >
+        <source src="audio/bai14.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai14.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai14.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai14.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd015"
+    aria-labelledby="tieu-de-pd015"
+    data-ma="PD015"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd015">
+        <a href="bai15.html">Bài Páo Dung số 15</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD015</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 15"
+    >
+        <source src="audio/bai15.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai15.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai15.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai15.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd016"
+    aria-labelledby="tieu-de-pd016"
+    data-ma="PD016"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd016">
+        <a href="bai16.html">Bài Páo Dung số 16</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD016</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 16"
+    >
+        <source src="audio/bai16.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai16.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai16.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai16.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd017"
+    aria-labelledby="tieu-de-pd017"
+    data-ma="PD017"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd017">
+        <a href="bai17.html">Bài Páo Dung số 17</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD017</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 17"
+    >
+        <source src="audio/bai17.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai17.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai17.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai17.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd018"
+    aria-labelledby="tieu-de-pd018"
+    data-ma="PD018"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd018">
+        <a href="bai18.html">Bài Páo Dung số 18</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD018</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Hôn nhân – cưới hỏi</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 18"
+    >
+        <source src="audio/bai18.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai18.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai18.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai18.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd019"
+    aria-labelledby="tieu-de-pd019"
+    data-ma="PD019"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd019">
+        <a href="bai19.html">Bài Páo Dung số 19</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD019</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 19"
+    >
+        <source src="audio/bai19.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai19.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai19.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai19.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd020"
+    aria-labelledby="tieu-de-pd020"
+    data-ma="PD020"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd020">
+        <a href="bai20.html">Bài Páo Dung số 20</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD020</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 20"
+    >
+        <source src="audio/bai20.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai20.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai20.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai20.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd021"
+    aria-labelledby="tieu-de-pd021"
+    data-ma="PD021"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd021">
+        <a href="bai21.html">Bài Páo Dung số 21</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD021</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 21"
+    >
+        <source src="audio/bai21.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai21.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai21.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai21.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd022"
+    aria-labelledby="tieu-de-pd022"
+    data-ma="PD022"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd022">
+        <a href="bai22.html">Bài Páo Dung số 22</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD022</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 22"
+    >
+        <source src="audio/bai22.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai22.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai22.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai22.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd023"
+    aria-labelledby="tieu-de-pd023"
+    data-ma="PD023"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd023">
+        <a href="bai23.html">Bài Páo Dung số 23</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD023</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 23"
+    >
+        <source src="audio/bai23.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai23.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai23.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai23.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd024"
+    aria-labelledby="tieu-de-pd024"
+    data-ma="PD024"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd024">
+        <a href="bai24.html">Bài Páo Dung số 24</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD024</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 24"
+    >
+        <source src="audio/bai24.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai24.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai24.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai24.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd025"
+    aria-labelledby="tieu-de-pd025"
+    data-ma="PD025"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd025">
+        <a href="bai25.html">Bài Páo Dung số 25</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD025</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Tết – chúc tụng – tân gia</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 25"
+    >
+        <source src="audio/bai25.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai25.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai25.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai25.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd026"
+    aria-labelledby="tieu-de-pd026"
+    data-ma="PD026"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd026">
+        <a href="bai26.html">Bài Páo Dung số 26</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD026</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đảng, Bác Hồ, quê hương và đời sống mới</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 26"
+    >
+        <source src="audio/bai26.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai26.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai26.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai26.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd027"
+    aria-labelledby="tieu-de-pd027"
+    data-ma="PD027"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd027">
+        <a href="bai27.html">Bài Páo Dung số 27</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD027</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đảng, Bác Hồ, quê hương và đời sống mới</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 27"
+    >
+        <source src="audio/bai27.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai27.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai27.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai27.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd028"
+    aria-labelledby="tieu-de-pd028"
+    data-ma="PD028"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd028">
+        <a href="bai28.html">Bài Páo Dung số 28</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD028</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đảng, Bác Hồ, quê hương và đời sống mới</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 28"
+    >
+        <source src="audio/bai28.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai28.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai28.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai28.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd029"
+    aria-labelledby="tieu-de-pd029"
+    data-ma="PD029"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd029">
+        <a href="bai29.html">Bài Páo Dung số 29</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD029</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đảng, Bác Hồ, quê hương và đời sống mới</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 29"
+    >
+        <source src="audio/bai29.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai29.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai29.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai29.html">Xem chi tiết</a>
+    </div>
+</article>
+<article
+    class="bai-hat"
+    id="bai-pd030"
+    aria-labelledby="tieu-de-pd030"
+    data-ma="PD030"
+    data-trang-thai="da-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pd030">
+        <a href="bai30.html">Bài Páo Dung số 30</a>
+    </h3>
+    
+    <p class="ma-tu-lieu">Mã tư liệu: PD030</p>
+    <p class="trang-thai-the da-kiem-chung">
+        Trạng thái: Đã kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> Bà Đặng Thị Thoa, bà Lý Thị Văn, bà Bàn Thị Dần</p>
+    <p><strong>Chủ đề:</strong> Đảng, Bác Hồ, quê hương và đời sống mới</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số 30"
+    >
+        <source src="audio/bai30.m4a" type="audio/mp4">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="bai30.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="bai30.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="bai30.html">Xem chi tiết</a>
+    </div>
+</article>
 </div>
 </main>
 <a class="nut-len-dau trang-chu-len-dau" href="#trang-chu">
     ↑ Lên đầu trang
 </a>
+<div class="quyen-tu-lieu">
+    <strong>Quyền sử dụng tư liệu:</strong>
+    Tư liệu sử dụng cho mục đích nghiên cứu, giáo dục và bảo tồn văn hóa; không nhằm mục đích thương mại.
+</div>
 <footer>
     <p>Páo Dung Hùng Lợi - Không gian lưu giữ văn hóa người Dao</p>
 </footer>

@@ -147,6 +147,31 @@ cacONThongKe.forEach(function (oThongKe) {
     });
 });
 cacAudio.forEach(function (audioDangPhat) {
+        const nguonAudio = audioDangPhat.querySelector("source");
+
+    if (nguonAudio) {
+        nguonAudio.addEventListener("error", function () {
+            audioDangPhat.style.display = "none";
+
+            const baiHat = audioDangPhat.closest(".bai-hat");
+
+            if (
+                baiHat &&
+                !baiHat.querySelector(".thong-bao-audio")
+            ) {
+                const thongBaoAudio = document.createElement("p");
+
+                thongBaoAudio.className = "thong-bao-audio";
+                thongBaoAudio.textContent =
+                    "Bản ghi âm: đang bổ sung";
+
+                audioDangPhat.insertAdjacentElement(
+                    "afterend",
+                    thongBaoAudio
+                );
+            }
+        });
+    }
     audioDangPhat.addEventListener("play", function () {
         cacAudio.forEach(function (audioKhac) {
             if (audioKhac !== audioDangPhat) {
@@ -191,3 +216,127 @@ cacAnhTheBai.forEach(function (anh) {
         }
     }
 });
+/* ===== GIAO DIỆN TRỢ LÝ AI ===== */
+
+const aiCauHoi = document.getElementById("ai-cau-hoi");
+const aiGui = document.getElementById("ai-gui");
+const aiTraLoi = document.getElementById("ai-tra-loi");
+const aiGoiY = document.querySelectorAll(".ai-goi-y-btn");
+
+aiGoiY.forEach((nut) => {
+    nut.addEventListener("click", () => {
+        aiCauHoi.value = nut.textContent.trim();
+        aiCauHoi.focus();
+    });
+});
+/* ===== NẠP KHO TƯ LIỆU CHO AI ===== */
+
+let khoTuLieuAI = null;
+
+async function taiKhoTuLieuAI() {
+    const kho = [];
+
+    for (let i = 1; i <= 30; i++) {
+        const soBai = String(i).padStart(2, "0");
+        const maBai = `PD${String(i).padStart(3, "0")}`;
+
+        try {
+            const response = await fetch(`bai${soBai}.html`);
+
+            if (!response.ok) {
+                continue;
+            }
+
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, "text/html");
+
+            const layText = (selector) => {
+                const phanTu = doc.querySelector(selector);
+                return phanTu
+                    ? phanTu.textContent.replace(/\s+/g, " ").trim()
+                    : "";
+            };
+
+            const dongChuDe = Array.from(
+                doc.querySelectorAll(".thong-tin-nhanh p")
+            ).find((p) => p.textContent.includes("Chủ đề:"));
+
+            const chuDe = dongChuDe
+                ? dongChuDe.textContent
+                      .replace("Chủ đề:", "")
+                      .replace(/\s+/g, " ")
+                      .trim()
+                : "";
+
+            kho.push({
+                so: soBai,
+                ma: maBai,
+                ten: `Bài Páo Dung số ${soBai}`,
+                chuDe: chuDe,
+                gioiThieu: layText("#gioi-thieu-bai + p"),
+                yNghiaVanHoa: layText("#y-nghia-van-hoa + p"),
+                loiBaiHat: layText("#loi-bai-hat + .loi-song-song"),
+                lienKet: `bai${soBai}.html`
+            });
+        } catch (error) {
+            console.error(`Không đọc được Bài ${soBai}:`, error);
+        }
+    }
+
+    return kho;
+}
+if (aiGui) {
+    aiGui.addEventListener("click", async () => {
+        const cauHoi = aiCauHoi.value.trim();
+
+        if (!cauHoi) {
+            aiCauHoi.focus();
+            return;
+        }
+
+        aiTraLoi.hidden = false;
+        aiTraLoi.textContent = "Trợ lý AI đang tra cứu kho tư liệu...";
+
+        aiGui.disabled = true;
+        aiGui.textContent = "Đang hỏi...";
+
+        try {
+            if (!khoTuLieuAI) {
+                khoTuLieuAI = await taiKhoTuLieuAI();
+            }
+
+            const response = await fetch(
+                "https://pao-dung-ai.lehuongtq95.workers.dev",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        cauHoi: cauHoi,
+                        khoTuLieu: khoTuLieuAI
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(
+                    data.error || "Không thể kết nối tới Trợ lý AI."
+                );
+            }
+
+            aiTraLoi.textContent = data.traLoi;
+
+        } catch (error) {
+            console.error(error);
+
+            aiTraLoi.textContent =
+                "Trợ lý AI hiện chưa trả lời được. Vui lòng thử lại.";
+        } finally {
+            aiGui.disabled = false;
+            aiGui.textContent = "Hỏi AI";
+        }
+    });
+}
