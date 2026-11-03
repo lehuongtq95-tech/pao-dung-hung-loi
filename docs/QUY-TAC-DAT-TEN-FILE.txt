@@ -1,0 +1,47 @@
+QUY TẮC ĐẶT TÊN FILE TƯ LIỆU PÁO DUNG
+
+1. FILE GỐC
+
+Ưu tiên giữ nguyên tên file do thiết bị hoặc người cung cấp tạo ra.
+
+Ví dụ:
+
+VID_20261012_143020.mp4
+REC_20261012_143522.m4a
+IMG_4588.jpg
+
+File gốc được lưu trong:
+
+nguon-goc/PDXXX/
+
+Không chỉnh sửa, ghi đè hoặc đổi nội dung file gốc.
+
+2. FILE DÙNG TRÊN WEBSITE
+
+Audio:
+PD001 → audio/bai01.mp3
+PD002 → audio/bai02.mp3
+
+Ảnh:
+PD001 → images/bai01.jpg
+PD002 → images/bai02.jpg
+
+Trang chi tiết:
+PD001 → bai01.html
+PD002 → bai02.html
+
+Hồ sơ:
+PD001 → data/DU-LIEU-PD001.txt
+
+3. NGUYÊN TẮC
+
+Một mã tư liệu chỉ đại diện cho một hồ sơ tư liệu.
+
+Mã PD trong:
+- hồ sơ dữ liệu
+- trang HTML
+- audio
+- ảnh
+- thư mục nguồn gốc
+
+phải thống nhất với nhau.

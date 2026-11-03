@@ -1,0 +1,71 @@
+QUY TRÌNH SƯU TẦM TƯ LIỆU PÁO DUNG
+
+I. TRƯỚC KHI ĐI SƯU TẦM
+
+1. Chuẩn bị:
+- Điện thoại / thiết bị ghi âm.
+- Pin đầy hoặc pin dự phòng.
+- Dung lượng lưu trữ còn đủ.
+- Phiếu thu thập tư liệu.
+- Checklist sưu tầm.
+- Giấy bút nếu cần.
+
+2. Kiểm tra thiết bị:
+- Thử ghi âm khoảng 10–20 giây.
+- Nghe lại để kiểm tra âm lượng.
+- Tắt các thông báo có thể làm gián đoạn ghi âm.
+- Không bật các hiệu ứng lọc âm nếu chưa cần thiết.
+
+II. TRƯỚC KHI GHI ÂM / GHI HÌNH
+
+1. Giới thiệu mục đích sưu tầm.
+
+2. Hỏi và ghi lại:
+- Họ tên người thể hiện.
+- Địa điểm.
+- Ngày ghi.
+- Số thứ tự bài trong bộ tư liệu.
+- Hoàn cảnh hát.
+- Nguồn gốc bài hát.
+
+3. Hỏi rõ việc cho phép:
+- Có đồng ý ghi âm / ghi hình hay không.
+- Có đồng ý lưu giữ tư liệu hay không.
+- Có đồng ý đưa tư liệu lên website hay không.
+- Có đồng ý sử dụng hình ảnh hay không.
+- Có yêu cầu ghi tên hoặc nguồn cụ thể hay không.
+
+Không mặc định rằng việc đồng ý ghi âm đồng nghĩa với đồng ý công bố trên Internet.
+
+III. KHI GHI ÂM
+
+- Chọn nơi ít tiếng ồn nhất có thể.
+- Đặt thiết bị ổn định.
+- Không cầm điện thoại và di chuyển liên tục.
+- Không đặt quá xa người hát.
+- Hạn chế nói chuyện trong lúc đang hát.
+- Nếu bị gián đoạn, không xóa bản ghi cũ; có thể ghi lại một bản mới.
+
+IV. SAU KHI GHI
+
+1. Nghe thử một đoạn đầu, giữa và cuối file.
+
+2. Kiểm tra:
+- Có tiếng không.
+- Có bị mất đoạn không.
+- Có tiếng ồn bất thường không.
+
+3. Không chỉnh sửa hoặc xóa file gốc.
+
+4. Ghi tên file gốc vào phiếu sưu tầm.
+
+5. Ghi các thông tin còn thiếu để hỏi bổ sung sau.
+
+V. SAU BUỔI SƯU TẦM
+
+- Sao chép file gốc vào thư mục nguon-goc.
+- Không chỉnh sửa file trong nguon-goc.
+- Tạo ít nhất một bản sao lưu khác.
+- Tạo hồ sơ mã tư liệu tương ứng.
+- Chỉ tạo bản xử lý cho website từ bản sao của file gốc.
+- Không công bố tư liệu khi quyền sử dụng chưa rõ.

@@ -1,0 +1,85 @@
+MẪU NHẬP DỮ LIỆU BÀI PÁO DUNG
+Phiên bản dữ liệu:1.0
+1. THÔNG TIN NHẬN DIỆN
+Mã tư liệu:PD028
+Số thứ tự bài:28
+Ngôn ngữ:tiếng Dao
+Thời lượng:
+2. NGƯỜI THỂ HIỆN
+Họ và tên:
+Thông tin bổ sung về người thể hiện:
+Người cung cấp thông tin về người thể hiện:
+3. THÔNG TIN GHI ÂM / SƯU TẦM
+Địa điểm ghi âm:
+Ngày ghi âm:
+Người ghi âm:
+Người sưu tầm:
+Nguồn tư liệu: Phụ lục 1 - Tư liệu hát Páo Dung sưu tầm tại Trung Minh, Hùng Lợi, Tuyên Quang.
+4. NỘI DUNG VÀ BỐI CẢNH
+Chủ đề:Đảng, Bác Hồ, quê hương và đời sống mới
+:
+:
+Giới thiệu bài hát:
+Ý nghĩa văn hóa:
+5. LỜI BÀI HÁT
+Lời tiếng Dao:
+Bác Hồ đã dạy toàn dân tộc
+Mở đường mở lối để cho dân
+Nhưng phải có xe, có phương tiện
+Không xe, không có ô tô để lưu thông
+
+Những nhà điều kiện không lo nghĩ
+Nhà nhà ấm no vui tràn đầy
+Chính quyền ban hành xóa nhà dột nát
+Yên tâm làm ăn không phải lo
+Nghĩa tiếng Việt:
+Bác Hồ đã dạy toàn dân tộc
+Mở đường mở lối để cho dân
+Nhưng phải có xe, có phương tiện
+Không xe, không có ô tô để lưu thông
+
+Những nhà điều kiện không lo nghĩ
+Nhà nhà ấm no vui tràn đầy
+Chính quyền ban hành xóa nhà dột nát
+Yên tâm làm ăn không phải lo
+Người phiên âm:
+Người dịch nghĩa:
+6. KIỂM CHỨNG
+Tình trạng tư liệu:
+Người kiểm chứng:
+Ngày kiểm chứng:
+Ngày cập nhật cuối:
+7. QUYỀN VÀ NGUỒN
+Quyền sử dụng bản ghi âm:
+Quyền sử dụng hình ảnh:
+Quyền sử dụng lời hát / bản dịch:
+Yêu cầu ghi nguồn khi sử dụng:
+Tài liệu liệt kê người cung cấp tư liệu gồm:
+- Bà Đặng Thị Thoa
+- Bà Lý Thị Văn
+- Bà Bàn Thị Dần
+8. GHI CHÚ TƯ LIỆU
+Ghi chú về bản ghi:
+Đoạn chưa nghe rõ:
+Dị bản khác (nếu có):
+Thông tin cần tiếp tục xác minh:
+9. TÀI LIỆU LIÊN QUAN
+Ảnh:
+Chú thích ảnh:
+Nguồn ảnh:
+Video:
+PDF / tài liệu nghiên cứu:
+Phỏng vấn:
+Nguồn tham khảo khác:
+10. FILE TRÊN WEBSITE
+Tên file trang:
+Tên file audio:
+Tên file ảnh:
+Đã cập nhật lên website: Chưa
+Ngày cập nhật lên website:
+QUY TẮC QUẢN LÝ
+- Không tự suy đoán thông tin chưa được xác minh.
+- Mọi thay đổi quan trọng cần ghi ngày cập nhật.
+- Khi đã sửa nội dung trên website, cập nhật lại trạng thái "Đã cập nhật lên website".
+- Mã tư liệu trong hồ sơ, trang HTML và file audio phải thống nhất.
+- Nếu có thay đổi về số thứ tự bài, người thể hiện, nguồn hoặc quyền sử dụng, cần kiểm tra lại phần trích dẫn trên website.

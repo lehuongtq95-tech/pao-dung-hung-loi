@@ -1,0 +1,38 @@
+<article
+    class="bai-hat"
+    id="bai-pdXXX"
+    aria-labelledby="tieu-de-pdXXX"
+    data-ma="PDXXX"
+    data-trang-thai="dang-kiem-chung"
+>
+    <h3 class="tieu-de-bai" id="tieu-de-pdXXX">
+        <a href="baiXX.html">Bài Páo Dung số XX</a>
+    </h3>
+    <a href="baiXX.html" class="lien-ket-anh-bai">
+        <img
+            class="anh-the-bai"
+            src="images/baiXX.jpg"
+            alt="Ảnh tư liệu Bài Páo Dung số XX"
+            loading="lazy"
+        >
+    </a>
+    <p class="ma-tu-lieu">Mã tư liệu: PDXXX</p>
+    <p class="trang-thai-the dang-kiem-chung">
+        Trạng thái: Đang cập nhật và kiểm chứng
+    </p>
+    <p><strong>Người thể hiện:</strong> đang cập nhật</p>
+    <p><strong>Chủ đề:</strong> đang cập nhật</p>
+    
+    <audio
+        controls
+        preload="metadata"
+        aria-label="Bản ghi âm Bài Páo Dung số XX"
+    >
+        <source src="audio/baiXX.mp3" type="audio/mpeg">
+    </audio>
+    <div class="nhom-nut">
+        <a class="nut-loi" href="baiXX.html#loi-bai-hat">Xem lời bài hát</a>
+        <a class="nut-thong-tin" href="baiXX.html#thong-tin-tu-lieu">Xem thông tin</a>
+        <a class="nut-chi-tiet" href="baiXX.html">Xem chi tiết</a>
+    </div>
+</article>

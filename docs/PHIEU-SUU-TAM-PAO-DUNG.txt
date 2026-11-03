@@ -1,0 +1,72 @@
+PHIẾU THU THẬP TƯ LIỆU PÁO DUNG
+
+A. THÔNG TIN BUỔI THU THẬP
+
+Ngày thu thập:
+Địa điểm:
+Người thu thập:
+Người cung cấp tư liệu:
+
+B. THÔNG TIN NGƯỜI THỂ HIỆN
+
+Họ và tên:
+Năm sinh:
+Địa chỉ:
+Thông tin bổ sung:
+
+C. THÔNG TIN BÀI PÁO DUNG
+
+Số thứ tự bài:
+Ngôn ngữ:
+Chủ đề:
+:
+Hoàn cảnh thường hát:
+Ý nghĩa / nội dung được người cung cấp giải thích:
+
+D. THÔNG TIN BẢN GHI
+
+Ngày ghi âm / ghi hình:
+Địa điểm ghi:
+Người ghi:
+Thiết bị ghi:
+Tên file gốc:
+Thời lượng:
+
+E. LỜI BÀI HÁT
+
+Lời tiếng Dao:
+
+Người chép lời:
+
+Nghĩa tiếng Việt:
+
+Người dịch / giải nghĩa:
+
+F. NGUỒN GỐC TƯ LIỆU
+
+Tư liệu do ai cung cấp:
+Người thể hiện học bài hát từ ai:
+Có bản ghi / tài liệu cũ liên quan không:
+Thông tin khác về nguồn gốc:
+
+G. QUYỀN SỬ DỤNG
+
+Người cung cấp có đồng ý lưu giữ tư liệu: Có / Không
+
+Có đồng ý đưa bản ghi lên website: Có / Không / Chưa xác định
+
+Có đồng ý công bố hình ảnh: Có / Không / Chưa xác định
+
+Có yêu cầu ghi tên nguồn không:
+
+Phạm vi sử dụng được đồng ý:
+
+Ghi chú về quyền sử dụng:
+
+H. KIỂM CHỨNG
+
+Thông tin đã được ai xác nhận:
+Ngày xác nhận:
+Nội dung còn cần kiểm chứng:
+
+I. GHI CHÚ KHÁC

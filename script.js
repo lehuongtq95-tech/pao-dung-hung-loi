@@ -340,3 +340,114 @@ if (aiGui) {
         }
     });
 }
+/* ===== TỰ KIỂM TRA KIẾN THỨC ===== */
+
+const nutChamDiem = document.getElementById("cham-diem");
+const nutLamLai = document.getElementById("lam-lai");
+const ketQuaKiemTra = document.getElementById("ket-qua-kiem-tra");
+
+if (nutChamDiem) {
+    nutChamDiem.addEventListener("click", () => {
+        const cacCauHoi = document.querySelectorAll(".cau-hoi");
+
+        let soCauDung = 0;
+        let soCauDaLam = 0;
+
+        cacCauHoi.forEach((cauHoi) => {
+            cauHoi.classList.remove("dung", "sai");
+
+            const dapAnDung = cauHoi.dataset.answer;
+            const luaChon = cauHoi.querySelector("input:checked");
+
+            if (!luaChon) {
+                return;
+            }
+
+            soCauDaLam++;
+
+            if (luaChon.value === dapAnDung) {
+                soCauDung++;
+                cauHoi.classList.add("dung");
+            } else {
+                cauHoi.classList.add("sai");
+            }
+        });
+
+        ketQuaKiemTra.hidden = false;
+
+        if (soCauDaLam < 5) {
+            ketQuaKiemTra.textContent =
+                `Em đã trả lời ${soCauDaLam}/5 câu. Hãy hoàn thành đủ 5 câu trước khi xem kết quả.`;
+            return;
+        }
+
+        if (soCauDung === 5) {
+            ketQuaKiemTra.textContent =
+                "Kết quả: 5/5 câu đúng. Em đã nắm rất tốt những nội dung cơ bản!";
+        } else if (soCauDung >= 3) {
+            ketQuaKiemTra.textContent =
+                `Kết quả: ${soCauDung}/5 câu đúng. Em đã nắm được phần lớn nội dung, hãy tiếp tục khám phá kho tư liệu.`;
+        } else {
+            ketQuaKiemTra.textContent =
+                `Kết quả: ${soCauDung}/5 câu đúng. Em hãy xem lại phần giới thiệu và Góc học tập Páo Dung rồi thử lại nhé.`;
+        }
+    });
+}
+
+if (nutLamLai) {
+    nutLamLai.addEventListener("click", () => {
+        document
+            .querySelectorAll('.cau-hoi input[type="radio"]')
+            .forEach((input) => {
+                input.checked = false;
+            });
+
+        document.querySelectorAll(".cau-hoi").forEach((cauHoi) => {
+            cauHoi.classList.remove("dung", "sai");
+        });
+
+        ketQuaKiemTra.hidden = true;
+        ketQuaKiemTra.textContent = "";
+    });
+}
+/* ===== CHUYỂN CÂU HỎI ===== */
+
+const danhSachCauHoi = Array.from(
+    document.querySelectorAll("#tu-kiem-tra .cau-hoi")
+);
+
+const nutCauTruoc = document.getElementById("cau-truoc");
+const nutCauSau = document.getElementById("cau-sau");
+const soCauHienTai = document.getElementById("so-cau-hien-tai");
+
+let chiSoCau = 0;
+
+function hienThiCauHoi(index) {
+    danhSachCauHoi.forEach((cauHoi, i) => {
+        cauHoi.classList.toggle("dang-hien", i === index);
+    });
+
+    soCauHienTai.textContent =
+        `Câu ${index + 1}/${danhSachCauHoi.length}`;
+
+    nutCauTruoc.disabled = index === 0;
+    nutCauSau.disabled = index === danhSachCauHoi.length - 1;
+}
+
+if (nutCauTruoc && nutCauSau) {
+    nutCauTruoc.addEventListener("click", () => {
+        if (chiSoCau > 0) {
+            chiSoCau--;
+            hienThiCauHoi(chiSoCau);
+        }
+    });
+
+    nutCauSau.addEventListener("click", () => {
+        if (chiSoCau < danhSachCauHoi.length - 1) {
+            chiSoCau++;
+            hienThiCauHoi(chiSoCau);
+        }
+    });
+
+    hienThiCauHoi(0);
+}

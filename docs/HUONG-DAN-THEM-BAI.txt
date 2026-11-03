@@ -1,0 +1,85 @@
+QUY TRÌNH THÊM MỘT BÀI PÁO DUNG MỚI
+1. Sao chép mau-bai.html thành baiXX.html.
+2. Tạo hồ sơ dữ liệu mới:
+   - Sao chép data/MAU-NHAP-DU-LIEU.txt.
+   - Đổi tên thành data/DU-LIEU-PDXXX.txt.
+   - Điền mã tư liệu, số bài và các thông tin đã xác minh.
+3. Trong baiXX.html thay:
+   - Bài Páo Dung số XX
+   - PDXXX
+   - baiXX.mp3
+   - baiXX.jpg
+4. Thêm file âm thanh tương ứng vào thư mục audio.
+5.Thêm ảnh tư liệu tương ứng vào thư mục images.
+Quy ước:
+- Bài 01 → images/bai01.jpg
+- Bài 02 → images/bai02.jpg
+- Bài 03 → images/bai03.jpg
+- Các bài sau tiếp tục theo quy luật này.
+Nếu chưa có ảnh thật, có thể dùng ảnh tạm nhưng phải ghi:
+Nguồn ảnh: đang cập nhật
+Quyền sử dụng hình ảnh: đang cập nhật
+6. Thêm một <article class="bai-hat"> mới vào index.html.
+Có thể sao chép mẫu trong docs/MAU-THE-BAI.txt,
+sau đó thay XX và XXX bằng số bài và mã tư liệu tương ứng.
+7. Kiểm tra:
+   - data-ma
+   - data-trang-thai
+   - id của article
+   - id tiêu đề
+   - đường dẫn baiXX.html
+   - đường dẫn audio/baiXX.mp3
+   - đường dẫn images/baiXX.jpg
+8. Cập nhật nút:
+   - Bài trước
+   - Bài tiếp theo
+9. Kiểm tra Trang chủ:
+   - Tìm kiếm
+   - Bộ lọc trạng thái
+   - Sắp xếp
+   - Thống kê
+10. Kiểm tra trang chi tiết:
+   - Audio
+   - Lời bài hát
+   - Thông tin tư liệu
+   - Sao chép liên kết
+   - Sao chép trích dẫn
+   - In / Lưu PDF
+KIỂM TRA ĐỒNG BỘ TRƯỚC KHI HOÀN THÀNH
+Ví dụ với PD004, phải khớp:
+- Mã tư liệu: PD004
+- Trang chi tiết: bai04.html
+- Audio: audio/bai04.mp3
+- Ảnh: images/bai04.jpg
+- Hồ sơ: data/DU-LIEU-PD004.txt
+- Thẻ Trang chủ: data-ma="PD004"
+Không để một bài dùng nhầm mã, audio, ảnh hoặc hồ sơ của bài khác.
+CẬP NHẬT WEBSITE ONLINE
+Sau khi bài mới đã hoạt động đúng trên máy:
+1. Xác định các file đã thay đổi trong thư mục pao-dung-hung-loi.
+2. Sao chép các file cần công khai sang:
+   pao-dung-hung-loi-public
+3. Không đưa các thư mục quản lý nội bộ lên bản public:
+   - data
+   - docs
+   - mau-bai.html
+   - README.txt
+4. Mở index.html trong thư mục public và kiểm tra lại.
+5. Trên GitHub:
+   - Mở repository pao-dung-hung-loi.
+   - Chọn Add file.
+   - Chọn Upload files.
+   - Tải các file mới hoặc file đã thay đổi.
+   - Commit changes.
+6. Chờ GitHub Pages triển khai bản mới.
+7. Mở:
+   https://lehuongtq95-tech.github.io/pao-dung-hung-loi/
+8. Nhấn Ctrl + F5 và kiểm tra:
+   - Bài mới đã xuất hiện.
+   - Ảnh và audio đúng.
+   - Các liên kết hoạt động.
+   - Thống kê đúng.
+   - Bài trước / Bài tiếp theo đúng.
+9. Sau khi website online hoạt động đúng, cập nhật hồ sơ:
+   Đã cập nhật lên website: Có
+   Ngày cập nhật lên website: ngày thực tế xuất bản.
