@@ -2264,3 +2264,6 @@ select {
     font-family: inherit;
     text-transform: uppercase;
 }
+body#trang-chu > h1 {
+    text-transform: uppercase;
+}
